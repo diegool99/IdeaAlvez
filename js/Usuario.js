@@ -1,12 +1,17 @@
 class Usuario {
   //CONSTRUCTOR
-  constructor(nombre, email, contrasenia) {
+  constructor(id,nombre, email, contrasenia) {
+    this.id = id;
     this.nombre = nombre;
     this.email = email;
     this.contrasenia = contrasenia;
   }
 
   //GETTERS
+
+  get getId() {
+    return this.id;
+  }
 
   get getNombre() {
     return this.nombre;

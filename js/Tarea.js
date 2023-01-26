@@ -8,14 +8,18 @@ const Tareas = {
 
 class Tarea {
     //CONSTRUCTOR
-    constructor(categoria,responsable,tarea,descripcion){
-        this.id = punteroId++;
+    constructor(id,categoria,responsable,tarea,descripcion,estado,fecha){
+        if (id == 0) {
+            this.id = punteroId++;
+        }
         this.categoria = categoria;
         this.responsable = responsable;
         this.tarea = tarea;
         this.descripcion = descripcion;
-        this.tipoTarea = Tareas.EnCola;
-        this.fecha = new Date(Date.now());
+        this.tipoTarea = estado;
+        this.fecha = fecha;
+        //this.tipoTarea = Tareas.EnCola;
+        //this.fecha = new Date(Date.now());
     }
 
     //GETTERS

@@ -43,42 +43,33 @@
         <div class="mb-3 col-6">
           <label for="InputEmail1" class="form-label">Email</label>
           <input type="email" class="form-control" id="InputEmail1">
-          <div class="form-text">Proba con aa@aa.com</div>
+          <div class="form-text">Proba con dd@dd.com</div>
         </div>
         <div class="mb-3 col-6">
           <label for="InputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="InputPassword1">
-          <div class="form-text">Proba con 1234</div>
+          <div class="form-text">Proba con dd.aa123</div>
         </div>
         <button id="btnLogin" type="submit" class="btn btn-primary col-6">Iniciar sesión</button>
       </section>
-      <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex" id="toastLogin">
-          <div class="toast-body">
-            <p id="avisoLogin"></p>
-          </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
       <div class="row" id="SeccionTareas">
         <section class="col-12 sct-nueva-tarea">
           <form action="">
             <div class="form-floating">
               <input
                 type="text"
-                class="form-control is-invalid"
+                class="form-control"
                 id="inputCategoria"
                 placeholder="Categoria"
               />
               <label for="inputCategoria">Categoria</label>
             </div>
             <div class="form-floating">
-              <input
-                type="text"
+              <select
                 class="form-control"
                 id="inputResponsable"
-                placeholder="Responsable"
-              />
+              >
+              </select>
               <label for="inputResponsable">Responsable</label>
             </div>
             <div class="form-floating">
@@ -105,91 +96,38 @@
           </form>
         </section>
         <section id="tareasEnCola" class="sct_tareas col-3">
+          
           <div class="section-title">
             <h2>En Cola</h2>
           </div>
-          <div class="card text-center">
-            <div class="card-header">
-              <h3>Casa</h3>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Lavar ropa</h5>
-              <p class="card-text">lavar ropa sucia</p>
-              <p class="card-text">Responsable: Diego</p>
-              <a href="#" class="btn btn-primary">En proceso</a>
-            </div>
-            <div class="card-footer text-muted">Creado hace 2 dias</div>
-          </div>
+          
         </section>
-        <section class="sct_tareas col-3">
+        <section id="tareasEnProceso" class="sct_tareas col-3">
+          
           <div class="section-title">
             <h2>En Proceso</h2>
           </div>
-          <div class="card text-center">
-            <div class="card-header">
-              <h3>Jardin</h3>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Cortar pasto</h5>
-              <p class="card-text">Comprar combustible</p>
-              <p class="card-text">Responsable: Diego</p>
-              <a href="#" class="btn btn-primary">Finalizado</a>
-            </div>
-            <div class="card-footer text-muted">En proceso hace 2 dias</div>
-          </div>
-          <div class="card text-center">
-            <div class="card-header">
-              <h3>Casa</h3>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Comprar carne</h5>
-              <p class="card-text">Milanesas</p>
-              <p class="card-text">Responsable: Diego</p>
-              <a href="#" class="btn btn-primary">Finalizado</a>
-            </div>
-            <div class="card-footer text-muted">En proceso hace 2 dias</div>
-          </div>
+          
         </section>
-        <section class="sct_tareas col-3">
+        <section id="tareasFinalizadas" class="sct_tareas col-3">
+          
           <div class="section-title">
             <h2>Finalizado</h2>
           </div>
-          <div class="card text-center">
-            <div class="card-header">
-              <h3>Casa</h3>
-              <button
-                type="button"
-                class="btn-close"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Lavar ropa</h5>
-              <p class="card-text">lavar ropa sucia</p>
-              <p class="card-text">Responsable: Diego</p>
-              <a href="#" class="btn btn-primary">Borrar</a>
-            </div>
-            <div class="card-footer text-muted">Finalizado hace 6 dias</div>
-          </div>
+
         </section>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex" id="toastLogin">
+          <div class="toast-body">
+            <p id="avisoLogin"></p>
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -197,6 +135,7 @@
     ></script>
     <script src="./js/Tarea.js"></script>
     <script src="./js/Usuario.js"></script>
+    <script src="./js/GrupoFamiliar.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>
